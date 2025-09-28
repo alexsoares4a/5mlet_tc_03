@@ -1,8 +1,8 @@
 # 🚀 Tech Challenge | Fase 3 – Previsão do Preço do Bitcoin com Machine Learning
 
-> **Projeto Final da Pós-Graduação em Machine Learning Engineering – FIAP**  
+> **Projeto Pós-Graduação em Machine Learning Engineering – FIAP**  
 > **Aluno:** Alex Soares da Silva, RM354660  
-> **Turma:** 5MLET_TC_03  
+> **Turma:** 5MLET  
 > **Data:** Setembro de 2025
 
 ---
@@ -42,108 +42,74 @@ O resultado final é um sistema funcional que pode ser usado como base para apli
 ---
 
 ## 📁 Estrutura do Repositório
-tech-challenge-fase3/
+```
+5mlet_tc_03/
 ├── notebooks/
-│   └── bitcoin_analysis.ipynb        # Notebook completo com EDA e modelagem
+│   └── 5mlet_tc_03.ipynb        # Notebook completo com EDA e modelagem
 ├── app/
-│   └── dashboard.py                  # Aplicação Streamlit
+│   └── dashboard.py             # Aplicação Streamlit
 ├── models/
-│   ├── lstm_bitcoin.keras          # Modelo LSTM treinado
-│   └── scaler_bitcoin.pkl          # Scaler salvo para normalização
+│   ├── lstm_bitcoin.keras       # Modelo LSTM treinado
+│   └── scaler_bitcoin.pkl       # Scaler salvo para normalização
 ├── data/
-│   └── btc_historical.parquet      # Dados históricos processados
-├── requirements.txt                # Dependências do projeto
-└── README.md                       # Este arquivo
-
-
-
----
+│   └── btc_historical.parquet   # Dados históricos processados
+├── requirements.txt             # Dependências do projeto
+└── README.md                    # Este arquivo
+```
 
 ## ▶️ Como Executar
 
-### 1. Clone o repositório
-```bash
-git clone https://github.com/seuusuario/tech-challenge-fase3.git
-cd tech-challenge-fase3
+1. **Clone o repositório**
+    ```bash
+    git clone https://github.com/alexsoares4a/5mlet_tc_03.git
+    cd 5mlet_tc_03
+    ```
 
-2. Instale as dependências
-pip install -r requirements.txt
+2.  **Crie e ative um ambiente virtual**
+    ```bash
+    python -m venv venv
+    # No Linux/macOS:
+    source venv/bin/activate
 
-3. Execute o notebook (opcional)
-jupyter notebook notebooks/bitcoin_analysis.ipynb
+    # No Windows:
+    .\venv\Scripts\activate
+    ```
 
-4. Execute o dashboard Streamlit
-streamlit run app/dashboard.py
+3. **Instale as dependências**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-O dashboard será aberto no navegador (http://localhost:8501).
+4. **Execute o notebook (opcional)**
+    ```bash
+    jupyter notebook notebooks/bitcoin_analysis.ipynb
+    ```
 
-📊 Resultados dos Modelos 
+4. **Execute o dashboard Streamlit**
+    ```bash
+    streamlit run app/dashboard.py
+    ```
+    O dashboard será aberto no navegador (http://localhost:8501).
+
+## 📊 Resultados dos Modelos 
 
 Após avaliação rigorosa, os modelos foram comparados com base nas métricas: 
-LSTM
-	
-839,37
-	
-990,09
-	
-0,878
-AutoARIMA (com exógenas)
-	
-3.876,50
-	
-4.195,14
-	
--1,492
-Prophet (com múltiplas exógenas)
-	
-5.651,84
-	
-5.855,57
-	
--3,855
- 
+
+| MODELO | MAE (USD) | RMSE (USD) | R² (USD) | 
+|:----------|:-----------|:----------|:----------| 
+| LSTM | 872.720824 | 1135.948626 | 0.838226 |
+| AutoARIMA (com exógenas)| 3876.502715 | 4193.972997 | -1.513631 |
+| Prophet (com múltiplas exógenas) | 5660.275879 | 5864.584967 | -3.915014 |
  
 
-✅ Modelo Campeão: LSTM
-Com R² de 87,8%, o LSTM demonstrou superioridade ao capturar padrões não lineares e volatilidade do mercado de criptomoedas. 
+## ✅ Modelo Campeão: LSTM
+Com **R²** de **83,8%**, o **LSTM** demonstrou superioridade ao capturar padrões não lineares e volatilidade do mercado de criptomoedas. 
  
-📹 Vídeo Explicativo 
+## 📎 Recursos Úteis
 
-Assista ao storytelling completo do projeto, onde explico: 
+*   **Site do Projeto:** [https://tech-challenge-4-grupo51.streamlit.app/](https://tech-challenge-4-grupo51.streamlit.app/)
 
-    O problema e fontes de dados
-    Análise exploratória
-    Comparação de modelos
-    Escolha do LSTM como campeão
-    Funcionamento do dashboard
-     
+*   **Vídeo Explicativo:** [https://github.com/alexsoares4a/5mlet_tc_03/video/previsao_bitcoin.mp4](https://github.com/alexsoares4a/5mlet_tc_03/video/previsao_bitcoin.mp4)
 
-🔗 Assistir ao vídeo no YouTube  
- 
-💡 Insights e Conclusões 
-
-    O Fear & Greed Index apresentou alta correlação positiva (0,55) com o BTC, indicando que períodos de "ganância" tendem a coincidir com altas.
-    O Índice Dólar (DXY) também teve correlação positiva (+0,32), contrariando a expectativa de relação negativa — possível sinal de alinhamento macroeconômico global.
-    Modelos lineares (AutoARIMA) e aditivos (Prophet) falharam em cenários de alta volatilidade, enquanto o LSTM se destacou por sua robustez.
-     
-
- 
-🛠️ Melhorias Futuras 
-
-    Incluir mais variáveis exógenas: notícias, volume de busca (Google Trends), stablecoins.
-    Implementar atualização automática dos dados via script agendado.
-    Expandir o dashboard com previsões em tempo real e alertas.
-    Testar modelos híbridos (LSTM + Prophet) para melhorar acurácia.
-     
-     
-
- 
-📚 Referências 
-
-    CoinGecko API: https://www.coingecko.com/en/api 
-    Alternative.me Fear & Greed Index: https://alternative.me/crypto/fear-and-greed-index/ 
-    Yahoo Finance (yfinance): https://pypi.org/project/yfinance/ 
-    StatsForecast: https://nixtla.io/statsforecast/ 
-    Prophet: https://facebook.github.io/prophet/ 
-    TensorFlow: https://www.tensorflow.org/ 
+---
      
