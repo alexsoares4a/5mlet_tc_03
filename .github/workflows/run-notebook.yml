@@ -31,7 +31,7 @@ jobs:
       # 4. Executar o notebook
       - name: "Executar o notebook"
         run: |
-          jupyter nbconvert --to notebook --execute notebooks/bitcoin_analysis.ipynb --output notebooks/bitcoin_analysis_executed.ipynb
+          jupyter nbconvert --to notebook --execute 5mlet_tc_03.ipynb --output 5mlet_tc_03_executed.ipynb
 
       # 5. Extrair arquivos atualizados (modelo e dados)
       - name: "Extrair arquivos atualizados (modelo e dados)"
