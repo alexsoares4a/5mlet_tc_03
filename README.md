@@ -44,15 +44,16 @@ O resultado final é um sistema funcional que pode ser usado como base para apli
 ## 📁 Estrutura do Repositório
 ```
 5mlet_tc_03/
-├── notebooks/
-│   └── 5mlet_tc_03.ipynb        # Notebook completo com EDA e modelagem
 ├── app/
 │   └── dashboard.py             # Aplicação Streamlit
+├── data/
+│   └── btc_historical.parquet   # Dados históricos processados
 ├── models/
 │   ├── lstm_bitcoin.keras       # Modelo LSTM treinado
 │   └── scaler_bitcoin.pkl       # Scaler salvo para normalização
-├── data/
-│   └── btc_historical.parquet   # Dados históricos processados
+├── video/
+│   └── previsao_bitcoin.mp4     # Modelo LSTM treinado
+├── 5mlet_tc_03.ipynb            # Notebook completo com EDA e modelagem
 ├── requirements.txt             # Dependências do projeto
 └── README.md                    # Este arquivo
 ```
@@ -90,24 +91,14 @@ O resultado final é um sistema funcional que pode ser usado como base para apli
     streamlit run app/dashboard.py
     ```
     O dashboard será aberto no navegador (http://localhost:8501).
-
-## 📊 Resultados dos Modelos 
-
-Após avaliação rigorosa, os modelos foram comparados com base nas métricas: 
-
-| MODELO | MAE (USD) | RMSE (USD) | R² (USD) | 
-|:----------|:-----------|:----------|:----------| 
-| LSTM | 872.720824 | 1135.948626 | 0.838226 |
-| AutoARIMA (com exógenas)| 3876.502715 | 4193.972997 | -1.513631 |
-| Prophet (com múltiplas exógenas) | 5660.275879 | 5864.584967 | -3.915014 |
  
 
 ## ✅ Modelo Campeão: LSTM
-Com **R²** de **83,8%**, o **LSTM** demonstrou superioridade ao capturar padrões não lineares e volatilidade do mercado de criptomoedas. 
+O **LSTM** demonstrou superioridade ao capturar padrões não lineares e volatilidade do mercado de criptomoedas. 
  
 ## 📎 Recursos Úteis
 
-*   **Site do Projeto:** [https://tech-challenge-4-grupo51.streamlit.app/](https://tech-challenge-4-grupo51.streamlit.app/)
+*   **Site do Projeto:** [https://5mlet-bitcoin.streamlit.app/](https://5mlet-bitcoin.streamlit.app/)
 
 *   **Vídeo Explicativo:** [https://github.com/alexsoares4a/5mlet_tc_03/video/previsao_bitcoin.mp4](https://github.com/alexsoares4a/5mlet_tc_03/video/previsao_bitcoin.mp4)
 
