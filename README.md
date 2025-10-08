@@ -100,7 +100,7 @@ O **LSTM** demonstrou superioridade ao capturar padrões não lineares e volatil
 
 *   **Site do Projeto:** [https://5mlet-bitcoin.streamlit.app/](https://5mlet-bitcoin.streamlit.app/)
 
-*   **Vídeo Explicativo:** [https://github.com/alexsoares4a/5mlet_tc_03/video/previsao_bitcoin.mp4](https://github.com/alexsoares4a/5mlet_tc_03/video/previsao_bitcoin.mp4)
+*   **Vídeo Explicativo:** [https://github.com/alexsoares4a/5mlet_tc_03/video/previsao_bitcoin.mp4](https://github.com/alexsoares4a/5mlet_tc_03/blob/main/video/previsao_bitcoin.mp4)
 
 ---
      
