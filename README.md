@@ -52,7 +52,7 @@ O resultado final é um sistema funcional que pode ser usado como base para apli
 │   ├── lstm_bitcoin.keras       # Modelo LSTM treinado
 │   └── scaler_bitcoin.pkl       # Scaler salvo para normalização
 ├── video/
-│   └── previsao_bitcoin.mp4     # Modelo LSTM treinado
+│   └── previsao_bitcoin.mp4     # Vídeo Explicativo
 ├── 5mlet_tc_03.ipynb            # Notebook completo com EDA e modelagem
 ├── requirements.txt             # Dependências do projeto
 └── README.md                    # Este arquivo
